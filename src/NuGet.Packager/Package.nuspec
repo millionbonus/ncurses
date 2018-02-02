@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>NCurses</id>
+    <version>1.0.0</version>
+    <title>NCurses</title>
+    <authors>Edison Chuang</authors>
+    <owners></owners>
+    <description>
+      NCurses is a Console wrapper which can help you do some screen-painting on Console more easier.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      NCurses is a Console wrapper which can help you do some screen-painting on Console more easier.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://bitbucket.org/millionbonus/ncurses/</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>
+      Copyright (C) 2018 Edison Chuang
+    </copyright>
+    <dependencies>
+        <group targetFramework="net40">
+        </group>
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="..\NCurses\bin\Release\*" target="lib" />
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>
