@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Curses.cs" />
     <Compile Include="CursesData.cs" />
-    <Compile Include="CursesDataNotFound.cs" />
+    <Compile Include="Exception\CursesDataNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
