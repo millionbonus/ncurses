@@ -60,7 +60,7 @@ namespace NCurses.Lib
                 }
                 else
                 {
-                    throw new CursesDataNotFound(key);
+                    throw new CursesDataNotFoundException(key);
                 }
             }
         }

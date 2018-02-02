@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace NCurses.Lib
 {
+    /// <summary>
+    /// CursesData is container of data which will be displyed on Console.
+    /// </summary>
     public class CursesData
     {
         public string Text { get; set; }
