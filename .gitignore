@@ -6,3 +6,6 @@ packages/
 *.suo
 *.user
 *.webinfo
+*.log
+*.bak
+*.nupkg

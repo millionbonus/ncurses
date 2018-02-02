@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NCurses\NCurses.Lib.csproj">
+    <ProjectReference Include="..\NCurses\NCurses.csproj">
       <Project>{01d665d8-87a0-471a-aa52-2ab78e755b04}</Project>
-      <Name>NCurses.Lib</Name>
+      <Name>NCurses</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
