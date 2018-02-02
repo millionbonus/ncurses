@@ -1,0 +1,8 @@
+.vs/
+packages/
+[b|B]in/
+[o|O]bj/
+[m|M]igrations/
+*.suo
+*.user
+*.webinfo
