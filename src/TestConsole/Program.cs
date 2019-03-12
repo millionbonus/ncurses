@@ -25,10 +25,19 @@ namespace TestConsole
             //Console.ReadKey();
         }
 
+        private static string[] history = new string[10];
+        private static int i = 0;
         private static void Curses_ReadKeyEvent(object sender, ReadKeyEventArgs e)
         {
-            Curses.Write(Guid.NewGuid().ToString(), e.KeyInfo.KeyChar.ToString(), 1, 1);
+            //Curses.Write(Guid.NewGuid().ToString(), e.KeyInfo.Key.ToString(), 1, 1);
+
+            var currKey = e.KeyInfo.Key.ToString() + "/" + e.KeyInfo.Modifiers.ToString();
+            Curses.Write("currKey", currKey, 1, 1);
+
+            history[i] = e.KeyInfo.KeyChar.ToString();
+            Curses.Write("history", string.Join(",", history), 1, 2, fg: ConsoleColor.Black, bg: ConsoleColor.Green);
             Curses.Refresh();
+            i = (i >= history.Length - 1) ? 0 : i+1;
         }
     }
 }
