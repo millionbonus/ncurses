@@ -18,7 +18,7 @@
     <projectUrl>https://bitbucket.org/millionbonus/ncurses/</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <license type="expression">MIT</license>
     <copyright>
       Copyright (C) 2018 Edison Chuang
     </copyright>
@@ -32,7 +32,7 @@
   <files>
     <file src="..\NCurses\bin\Release\*" target="lib" />
     <file src="lib\" target="lib" />
-    <file src="tools\" target="tools" />
-    <file src="content\" target="content" />
+    <!--<file src="tools\" target="tools" />
+    <file src="content\" target="content" />-->
   </files>
 </package>
