@@ -65,10 +65,60 @@ namespace NCurses.Lib
             }
         }
 
-        public static void Clear()
+        public static void Clear(ConsoleColor fg = ConsoleColor.White, ConsoleColor bg = ConsoleColor.Black)
         {
+            Console.ForegroundColor = fg;
+            Console.BackgroundColor = bg;
             Console.Clear();
         }
+
+        private Curses()
+        {
+
+        }
+
+        public delegate void ReadKeyEventHandler(object sender, ReadKeyEventArgs e);
+        public static event ReadKeyEventHandler ReadKeyEvent;
+
+        private static bool isEnd = false;
+        public static void Init()
+        {
+            do
+            {
+                Console.CursorVisible = false;
+                CursorVisible = false;
+                var keyinfo = Console.ReadKey(true);
+                if (ReadKeyEvent != null)
+                {
+                    ReadKeyEvent(typeof(Curses), new ReadKeyEventArgs(keyinfo));
+                }
+            }
+            while (!isEnd);
+        }
+        
+        public static void EndWin()
+        {
+            isEnd = true;
+        }
+        
+        public static void Write(string key, string text, int x, int y, 
+                                    ConsoleColor fg = ConsoleColor.White, ConsoleColor bg = ConsoleColor.Black)
+        {
+            if (!Data.ContainsKey(key))
+            {
+                Data.Add(key, new CursesData(text, x, y, fg, bg));
+            }
+            else
+            {
+                Data[key].Text = text;
+                Data[key].X = x;
+                Data[key].Y = y;
+                Data[key].Foreground = fg;
+                Data[key].Background = bg;
+            }
+
+        }
+
 
     }
 }

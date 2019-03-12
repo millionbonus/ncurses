@@ -2,17 +2,17 @@
 <package >
   <metadata>
     <id>NCurses</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>NCurses</title>
     <authors>Edison Chuang</authors>
     <owners></owners>
     <description>
-      NCurses is a Console wrapper which can help you do some screen-painting on Console more easier.
+      NCurses is a Console wrapper which can help you do some screen-painting on Console application more easier.
     </description>
     <releaseNotes>
     </releaseNotes>
     <summary>
-      NCurses is a Console wrapper which can help you do some screen-painting on Console more easier.
+      NCurses is a Console wrapper which can help you do some screen-painting on Console application more easier.
     </summary>
     <language>en-US</language>
     <projectUrl>https://bitbucket.org/millionbonus/ncurses/</projectUrl>
