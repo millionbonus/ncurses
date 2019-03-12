@@ -65,8 +65,10 @@ namespace NCurses.Lib
             }
         }
 
-        public static void Clear()
+        public static void Clear(ConsoleColor fg = ConsoleColor.White, ConsoleColor bg = ConsoleColor.Black)
         {
+            Console.ForegroundColor = fg;
+            Console.BackgroundColor = bg;
             Console.Clear();
         }
 
