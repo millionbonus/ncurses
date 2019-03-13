@@ -80,10 +80,17 @@ namespace NCurses.Lib
         public delegate void ReadKeyEventHandler(object sender, ReadKeyEventArgs e);
         public static event ReadKeyEventHandler ReadKeyEvent;
 
-        private static bool isEnd = false;
+        private static bool isStopped = false;
+
+        [Obsolete("Init() is deprecated. Please use StartReadKey() instead.")]
         public static void Init()
         {
-            while (!isEnd)
+            StartReadKey();
+        }
+
+        public static void StartReadKey()
+        {
+            while (!isStopped)
             {
                 var keyinfo = Console.ReadKey(true);
                 if (ReadKeyEvent != null)
@@ -93,9 +100,15 @@ namespace NCurses.Lib
             }
         }
         
+        [Obsolete("EndWin() is deprecated. Please use StopReadKey() instead.")]
         public static void EndWin()
         {
-            isEnd = true;
+            StopReadkey();
+        }
+
+        public static void StopReadkey()
+        {
+            isStopped = true;
         }
         
         public static void Write(string key, string text, int x, int y, 
