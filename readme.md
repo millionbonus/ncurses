@@ -4,6 +4,23 @@ NCurses is a Console wrapper which can help you do some screen-painting on conso
 ## License ##
 Licensed under the MIT license.
 
+## Installation ##
+
+* Manual download
+```
+https://github.com/millionbonus/ncurses/releases
+```
+
+* Use package manager
+``` bash
+$ Install-Package NCurses
+```
+
+* Use .net cli
+``` bash
+$ dotnet add package NCurses
+```
+
 ## Feature ##
 
 ## Usage ##
