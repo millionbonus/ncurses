@@ -83,17 +83,17 @@ namespace NCurses.Lib
         private static bool isEnd = false;
         public static void Init()
         {
-            do
+            Console.CursorVisible = false;
+            CursorVisible = false;
+
+            while (!isEnd)
             {
-                Console.CursorVisible = false;
-                CursorVisible = false;
                 var keyinfo = Console.ReadKey(true);
                 if (ReadKeyEvent != null)
                 {
                     ReadKeyEvent(typeof(Curses), new ReadKeyEventArgs(keyinfo));
                 }
             }
-            while (!isEnd);
         }
         
         public static void EndWin()
