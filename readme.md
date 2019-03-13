@@ -26,7 +26,7 @@ namespace TestConsole
             Curses.ReadKeyEvent += Curses_ReadKeyEvent;
 
             //start readkey loop
-            Curses.Init();
+            Curses.StartReadKey();
         }
 
         private static void Curses_ReadKeyEvent(object sender, ReadKeyEventArgs e)
