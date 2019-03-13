@@ -83,9 +83,6 @@ namespace NCurses.Lib
         private static bool isEnd = false;
         public static void Init()
         {
-            Console.CursorVisible = false;
-            CursorVisible = false;
-
             while (!isEnd)
             {
                 var keyinfo = Console.ReadKey(true);
