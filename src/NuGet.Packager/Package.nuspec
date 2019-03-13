@@ -15,7 +15,8 @@
       NCurses is a Console wrapper which can help you do some screen-painting on Console application more easier.
     </summary>
     <language>en-US</language>
-    <projectUrl>https://bitbucket.org/millionbonus/ncurses/</projectUrl>
+    <projectUrl>https://github.com/millionbonus/ncurses</projectUrl>
+    <repositoryUrl>repository</repositoryUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
