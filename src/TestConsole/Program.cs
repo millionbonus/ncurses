@@ -20,7 +20,7 @@ namespace TestConsole
             //Curses.Render("2");
 
             Curses.ReadKeyEvent += Curses_ReadKeyEvent;
-            Curses.Init();
+            Curses.StartReadKey();
 
             //Console.ReadKey();
         }
